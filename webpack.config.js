@@ -3,7 +3,10 @@ var webpack = require('webpack');
 
 module.exports = {
     devServer: {
-        inline: true,
+        historyApiFallback: true,
+	    hot: true,
+	    inline: true,
+	    progress: true,
         contentBase: './build',
         port: 3000
     },
@@ -12,6 +15,11 @@ module.exports = {
     entry: './app/index.js', 
     module: {
         loaders: [
+        	{
+        		test:/\.css$/,
+        		loaders:['style','css'],
+        		include:/app/
+        	},
             {
                 test: /\.js$/,
                 loaders: ['babel'],
