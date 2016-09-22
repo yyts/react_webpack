@@ -8,7 +8,7 @@ module.exports = {
 	    inline: true,
 	    progress: true,
         contentBase: './build',
-        port: 3000
+        // port: 3000
     },
     devtool: 'cheap-module-eval-source-map',
     //原文件地址
